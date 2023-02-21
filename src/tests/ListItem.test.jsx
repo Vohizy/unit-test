@@ -58,8 +58,18 @@ describe('ListItem', () => {
         expect(mockOnCheck.mock.calls.length).toBe(1)
     });
 
-    // TODO: implement this
-    it('callback is not called when not checkable', () => {});
+    
+    it('callback is not called when not checkable', () => {
+        const {getByTestId} = render(<ListItem
+            id='list-item-1'
+            checkable={false}
+            onCheck={mockOnCheck}
+            item='Lorem ipsum dolor sit amet consectetur'
+        />)
+        const node = getByTestId("test-list-item-1-container");
+        fireEvent.click(node)
+        expect(mockOnCheck.mock.calls.length).toBe(0)
+    });
 
     // TODO: implement this
     it('matches saved snapshot', () => {
