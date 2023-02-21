@@ -3,7 +3,7 @@ describe('First test in cypress', () => {
     cy.visit('https://example.cypress.io')
     cy.contains("Kitchen Sink")
     cy.contains("children").click();
-    cy.url().should('contains' , 'traversal')/* dans le page de url de children que j'ai click contient le mots traversal */
+    cy.url().should('contains' , 'traversal')/* dans le page de url de children que j'ai click contient le mots */
   })
   xit('app runs correctly', () => {
     cy.visit('http://localhost:3000')
