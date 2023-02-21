@@ -71,7 +71,7 @@ describe('ListItem', () => {
         expect(mockOnCheck.mock.calls.length).toBe(0)
     });
 
-    // TODO: implement this
+    
     it('matches saved snapshot', () => {
         const tree = render(
             <ListItem
